@@ -1,0 +1,50 @@
+@import '_variables.scss';
+
+.article-list {
+  .filter-text {
+    text-align: center;
+  }
+  .search-control {
+    text-align: center;
+    margin-bottom: 24px;
+    .search-box {
+      width: 25%;
+      min-width: 240px;
+      padding: 4px $common-length;
+      border: none;
+      border-bottom: 1px solid var(--color-body);
+    }
+    .search-btn {
+      margin-left: 4px;
+    }
+  }
+  .articles-control {
+    text-align: center;
+    .text-in {
+      margin-right: 2px;
+    }
+    .btn {
+      margin: 0 2px;
+    }
+  }
+  .articles-wrapper {
+    transition: opacity 0.25s;
+    &.is-searching {
+      opacity: 0.25;
+      pointer-events: none;
+    }
+  }
+  .article-cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 12px;
+    .article-card {
+      width: calc(50% - #{$common-length});
+      margin: $common-length / 2;
+      text-decoration: inherit; // one of the bug fix
+      @media screen and (max-width: 1024px) {
+        width: calc(100% - #{$common-length});
+      }
+    }
+  }
+}

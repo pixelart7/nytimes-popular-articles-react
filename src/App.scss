@@ -1,0 +1,15 @@
+@import '_variables.scss';
+
+.app {
+  padding-top: $common-length * 2;
+  padding-bottom: $common-length;
+  .page-title {
+    text-align: center;
+    @media screen and (max-width: 320px) {
+      font-size: 24px;
+    }
+    @media screen and (min-width: 321px) and (max-width: 420px) {
+      font-size: 28px;
+    }
+  }
+}

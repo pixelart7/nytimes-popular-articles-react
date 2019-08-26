@@ -1,0 +1,23 @@
+@import '_variables.scss';
+
+.media-display {
+  position: relative;
+  img, .img-preload {
+    border-radius: $common-border-radius;
+  }
+  .img-preload {
+    left: 0;
+    right: 0;
+    padding-top: 66.66%;
+    position: relative;
+    @include preload-style();
+  }
+  img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+  }
+}
